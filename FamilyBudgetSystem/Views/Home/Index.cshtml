@@ -1,0 +1,15 @@
+﻿@model FamilyBudgetSystem.Models.HomeVM
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <p>@Html.DisplayNameFor(model => model.Ballance) :@Html.DisplayFor(model => model.Ballance)</p>
+    <ul class="nav nav-pills">
+        <li>@Html.ActionLink("Добави приход", "Create", "Incomes", null, new { @class = "btn btn-success" })</li>
+        <li>@Html.ActionLink("Добави разход", "Create", "Expenses", null, new { @class = "btn btn-danger" })</li>
+    </ul>
+</div>
+<p>@Html.DisplayNameFor(model => model.Incomes) :@Html.DisplayFor(model => model.Incomes)</p>
+<img src='@Url.Action("Index","Chart")' />

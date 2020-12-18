@@ -1,0 +1,28 @@
+﻿@model FamilyBudgetSystem.Models.ChartVM
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @{
+            var chart = new Chart(600, 400, ChartTheme.Blue)
+                .AddTitle("Chart")
+                .AddLegend()
+                .AddSeries(
+                    name: "WebSite",
+                    chartType: "Pie",
+                    xValue: new[] { "Incomes", "Expenses" },
+                    yValues: new[] { @Model.Incomes, @Model.Expenses })
+                .Write();
+        }
+    </div>
+</body>
+</html>
