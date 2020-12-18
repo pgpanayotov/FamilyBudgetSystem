@@ -7,9 +7,10 @@
 
 <h2>Index</h2>
 
-@*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
+<p>
+        @Html.ActionLink("Добави приход", "Create", "Incomes", null, new { @class = "btn btn-success" })
+        @*@Html.ActionLink("Create New", "Create")*@
+        </p>
 <table class="table">
     <tr>
         <th>
@@ -24,23 +25,24 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.IncomeName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IncomeAmount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IncomeDate)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IncomeID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IncomeID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IncomeID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IncomeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IncomeAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IncomeDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.IncomeID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.IncomeID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.IncomeID })
+            </td>
+        </tr>
+    }
 
 </table>
