@@ -11,5 +11,5 @@
         <li>@Html.ActionLink("Добави разход", "Create", "Expenses", null, new { @class = "btn btn-danger" })</li>
     </ul>
 </div>
-<p>@Html.DisplayNameFor(model => model.Incomes) :@Html.DisplayFor(model => model.Incomes)</p>
+<p>@Html.DisplayNameFor(model => model.Incomes): @Html.DisplayFor(model => model.Incomes) | @Html.DisplayNameFor(model => model.Expenses): @Html.DisplayFor(model => model.Expenses)</p>
 <img src='@Url.Action("Index","Chart")' />

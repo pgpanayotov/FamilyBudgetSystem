@@ -31,6 +31,8 @@ namespace FamilyBudgetSystem.Controllers
 
             HomeVM viewModel = new HomeVM();
             viewModel.Ballance = ballance;
+            viewModel.Expenses = expenseSum;
+            viewModel.Incomes = incomeSum;
 
             return View(viewModel);
         }
